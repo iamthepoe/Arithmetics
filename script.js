@@ -1,5 +1,7 @@
 var time = 60;
-var timer = document.querySelector('#time');
+const timer = document.querySelector('#time');
+const account = document.querySelector('#account');
+const operations = ["+", "-", "*", "/"];
 
 function VerifyTime(){
   if(time<=0){
@@ -16,3 +18,10 @@ const myTimer = setInterval(VerifyTime, '1000');
 function GenerateRandomNumber(limit){
   return Math.floor(Math.random() * limit);
 }
+
+function ChooseOperation(){
+  return operations[GenerateRandomNumber(operations.length)];
+}
+
+account.innerHTML = `${ChooseOperation()}`
+
