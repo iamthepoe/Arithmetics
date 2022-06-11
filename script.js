@@ -1,12 +1,18 @@
-var time = 60;
+var time = 2;
+var points = 0;
+var result = 0;
 const timer = document.querySelector('#time');
 const account = document.querySelector('#account');
+const answer = document.querySelector('#answer');
 const operations = ["+", "-", "*", "/"];
 
 function VerifyTime(){
   if(time<=0){
     clearInterval(myTimer);
     timer.innerHTML = "Finalizado!";
+    answer.readOnly = true;
+    answer.placeholder = "Fim de tempo!"
+    account.innerHTML = `<h3>Sua pontuação foi de:</h3><br><p>${points}</p>`
   }else{
     time--;
     timer.innerHTML = time;
@@ -42,4 +48,12 @@ function CreateNewAccount(){
   }
 }
 
-CreateNewAccount();
+result = CreateNewAccount();
+
+answer.addEventListener('input', ()=>{
+  if(answer.value==result){
+    result = CreateNewAccount();
+    points++;
+    answer.value = '';
+  }
+});
