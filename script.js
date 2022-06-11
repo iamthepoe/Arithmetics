@@ -12,3 +12,7 @@ function VerifyTime(){
 }
 
 const myTimer = setInterval(VerifyTime, '1000');
+
+function GenerateRandomNumber(limit){
+  return Math.floor(Math.random() * limit);
+}
