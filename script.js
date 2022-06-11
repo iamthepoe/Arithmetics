@@ -23,5 +23,23 @@ function ChooseOperation(){
   return operations[GenerateRandomNumber(operations.length)];
 }
 
-account.innerHTML = `${ChooseOperation()}`
+function CreateNewAccount(){
+  let x = GenerateRandomNumber(1000);
+  let y = GenerateRandomNumber(1000);
 
+  if(ChooseOperation()=="+"){
+    account.innerHTML = `${x} + ${y}`
+    return x + y;
+  }else if(ChooseOperation()=="-"){
+    account.innerHTML = `${x} - ${y}`
+    return x - y;
+  }else if(ChooseOperation()=="*"){
+    account.innerHTML = `${x} * ${y}`
+    return x * y;
+  }else{
+    account.innerHTML = `${x} / ${y}`
+    return x / y;
+  }
+}
+
+CreateNewAccount();
