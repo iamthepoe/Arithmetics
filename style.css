@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+}
+
+:root{
+	--node: #73ff00;
+	--darknode: #060a04;
+}
+
+body{
+	background: var(--darknode);
+}
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100vw;
+	height: 10vh;
+	color: #ffffff;
+	padding: 3vw;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.header-list{
+	display: flex;
+	list-style: none;
+}
+
+.header-list-item{
+	margin-left: 10px;
+	margin-right: 10px;
+	transition: 0.2s;
+}
+
+.header-list-item:hover{
+	color: var(--node);
+}
