@@ -87,6 +87,21 @@ body{
 	flex-direction: column;
 	margin-bottom: 20px;
 }
+
+button{
+	margin-top: 5px;
+	border: none;
+	background-color: var(--nodegray);
+	text-align: center;
+	width: 450px;
+	height: 50px;
+	transition: 0.2s;
+}
+button:hover{
+	cursor: pointer;
+	color: black;
+	background-color: var(--node);
+}
 .card{
 	display: flex;
 	justify-content: center;
